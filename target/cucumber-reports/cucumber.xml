@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="13.121664">
+    <testcase classname="Back-end tests" name="Coin Desk API" time="2.406948">
+        <system-out>
+            <![CDATA[Given User perform GET method for Coin Desk.................................passed
+Then API response contains "USD" as currency................................passed
+Then API response contains "GBP" as currency................................passed
+Then API response contains "EUR" as currency................................passed
+Then The GBP description equals "British Pound Sterling"....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Validate order in Amazon" name="Place item in the shopping cart" time="10.714716">
+        <system-out>
+            <![CDATA[Given User is on Amazon page................................................passed
+And User search for "book" as search item...................................passed
+And User selects the item to add cart.......................................passed
+And User clicks on Add to cart icon.........................................passed
+Then Verify the cart has been updated and displays the number of items in the cart.passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

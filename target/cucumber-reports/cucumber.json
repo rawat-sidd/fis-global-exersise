@@ -1,0 +1,266 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2025-01-18T18:48:13.909Z",
+        "before": [
+          {
+            "result": {
+              "duration": 809336000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.TestSetup()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Coin Desk API",
+        "description": "",
+        "id": "back-end-tests;coin-desk-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1047252000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User perform GET method for Coin Desk",
+            "match": {
+              "location": "API_Step.user_perform_GET_method()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 448864500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "API response contains \"USD\" as currency",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 22
+                }
+              ],
+              "location": "API_Step.currency_should_be(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12303500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "API response contains \"GBP\" as currency",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GBP\"",
+                  "offset": 22
+                }
+              ],
+              "location": "API_Step.currency_should_be(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10867100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "API response contains \"EUR\" as currency",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"EUR\"",
+                  "offset": 22
+                }
+              ],
+              "location": "API_Step.currency_should_be(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 29701900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The GBP description equals \"British Pound Sterling\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"British Pound Sterling\"",
+                  "offset": 27
+                }
+              ],
+              "location": "API_Step.gbp_should_be(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@back-end"
+          }
+        ]
+      }
+    ],
+    "name": "Back-end tests",
+    "description": "",
+    "id": "back-end-tests",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/featureFiles/back-end.feature",
+    "tags": [
+      {
+        "name": "@back-end",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Open browser and navigate to Amazon place item in the shopping cart",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 13213500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Amazon page",
+            "match": {
+              "location": "UI_OrdersStep.user_is_on_amazon_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-18T18:48:16.310Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4136974300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Place item in the shopping cart",
+        "description": "",
+        "id": "validate-order-in-amazon;place-item-in-the-shopping-cart",
+        "after": [
+          {
+            "result": {
+              "duration": 739834100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 575340900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User search for \"book\" as search item",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"book\"",
+                  "offset": 16
+                }
+              ],
+              "location": "UI_OrdersStep.search_item(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2941341800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User selects the item to add cart",
+            "match": {
+              "location": "UI_OrdersStep.clicks_button_to_add_item_in_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2189254400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User clicks on Add to cart icon",
+            "match": {
+              "location": "UI_OrdersStep.user_clicks_on_shoping_cart_icon()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 102439200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Verify the cart has been updated and displays the number of items in the cart",
+            "match": {
+              "location": "UI_OrdersStep.should_be_visible_counter_yellow_badge_on_cart_icon()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@front-end"
+          }
+        ]
+      }
+    ],
+    "name": "Validate order in Amazon",
+    "description": "",
+    "id": "validate-order-in-amazon",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/featureFiles/orders.feature",
+    "tags": [
+      {
+        "name": "@front-end",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
